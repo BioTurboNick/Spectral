@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="CMFLocation" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Users\nicho\Source\Repos\Spectral\Spectral\ColorMatchingFunction-CIE2LuminanceCorrectedTopNormalized2.csv</Value>
+    </Setting>
+    <Setting Name="SpectraLocation" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Users\nicho\Source\Repos\Spectral\Spectral\Data\Set4.csv</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

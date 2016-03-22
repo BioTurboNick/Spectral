@@ -1,0 +1,115 @@
+﻿<UserControl x:Class="SpectraGraph"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Spectral"
+             xmlns:diag="clr-namespace:System.Diagnostics;assembly=WindowsBase"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="600">
+    <UserControl.Resources>
+        <local:GridDisplacementConverter x:Key="GridDisplacementConverter" />
+        <!--<CollectionViewSource x:Key="ExcitationSpectra" Source="{Binding}" Filter="ExcitationSpectraFilter" />
+        <CollectionViewSource x:Key="EmissionSpectra" Source="{Binding}" Filter="EmissionSpectraFilter" />-->
+    </UserControl.Resources>
+    <Grid>
+        <Line X1="25" X2="25" Y1="25" Stroke="Black">
+            <Line.Y2>
+                <Binding Path="ActualHeight" RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type UserControl}}" Converter="{StaticResource GridDisplacementConverter}" ConverterParameter="25" />
+            </Line.Y2>
+        </Line>
+        <Line X1="25" Stroke="Black">
+            <Line.Y1>
+                <Binding Path="ActualHeight" RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type UserControl}}" Converter="{StaticResource GridDisplacementConverter}" ConverterParameter="25" />
+            </Line.Y1>
+            <Line.Y2>
+                <Binding Path="ActualHeight" RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type UserControl}}" Converter="{StaticResource GridDisplacementConverter}" ConverterParameter="25" />
+            </Line.Y2>
+            <Line.X2>
+                <Binding Path="ActualWidth" RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type UserControl}}" Converter="{StaticResource GridDisplacementConverter}" ConverterParameter="25" />
+            </Line.X2>
+        </Line>
+        <Grid Margin="25 12.5">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height="10" />
+            </Grid.RowDefinitions>
+            <Rectangle Grid.Row="1">
+                <Rectangle.Fill>
+                    <LinearGradientBrush x:Name="SpectrumBackground" StartPoint="0, 0.5" EndPoint="1, 0.5" />
+                </Rectangle.Fill>
+            </Rectangle>
+            <ItemsControl Grid.Row="0" x:Name="ExcitationPlotDisplay" Background="{x:Null}">
+                <ItemsControl.ItemsSource>
+                    <Binding Path="ExcitationSpectra" RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type UserControl}}" />
+                </ItemsControl.ItemsSource>
+                <!--{Binding Source={StaticResource ExcitationSpectra}}-->
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <Canvas />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <local:Plot Interpolate="True" StrokeThickness="1.5" StrokeDashArray="5">
+                            <local:Plot.XAxisMinimum>
+                                <Binding Path="StartWavelength" RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}" />
+                            </local:Plot.XAxisMinimum>
+                            <local:Plot.XAxisMaximum>
+                                <Binding Path="EndWavelength" RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}" />
+                            </local:Plot.XAxisMaximum>
+                            <local:Plot.Height>
+                                <Binding Path="ActualHeight" RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType={x:Type ItemsControl}}" />
+                            </local:Plot.Height>
+                            <local:Plot.Width>
+                                <Binding Path="ActualWidth" RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType={x:Type ItemsControl}}" />
+                            </local:Plot.Width>
+                            <local:Plot.PlotStep>
+                                <Binding Path="WavelengthStep" RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}" />
+                            </local:Plot.PlotStep>
+                            <local:Plot.Data>
+                                <Binding Path="Data" />
+                            </local:Plot.Data>
+                        </local:Plot>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+
+            <ItemsControl Grid.Row="0" x:Name="EmissionPlotDisplay" Background="{x:Null}">
+                <!--{Binding Source={StaticResource EmissionSpectra}}-->
+                <ItemsControl.ItemsSource>
+                    <Binding Path="EmissionSpectra" RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type UserControl}}" />
+                </ItemsControl.ItemsSource>
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <Canvas />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <local:Plot Interpolate="True" IsFilled="True" StrokeThickness="1.5">
+                            <local:Plot.XAxisMinimum>
+                                <Binding Path="StartWavelength" RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}" />
+                            </local:Plot.XAxisMinimum>
+                            <local:Plot.XAxisMaximum>
+                                <Binding Path="EndWavelength" RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}" />
+                            </local:Plot.XAxisMaximum>
+                            <local:Plot.Height>
+                                <Binding Path="ActualHeight" RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType={x:Type ItemsControl}}" />
+                            </local:Plot.Height>
+                            <local:Plot.Width>
+                                <Binding Path="ActualWidth" RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType={x:Type ItemsControl}}" />
+                            </local:Plot.Width>
+                            <local:Plot.PlotStep>
+                                <Binding Path="WavelengthStep" RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}" />
+                            </local:Plot.PlotStep>
+                            <local:Plot.Data>
+                                <Binding Path="Data" />
+                            </local:Plot.Data>
+                        </local:Plot>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </Grid>
+    </Grid>
+</UserControl>

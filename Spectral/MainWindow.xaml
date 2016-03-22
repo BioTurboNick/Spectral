@@ -1,0 +1,29 @@
+﻿<Window x:Class="MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:Spectral"
+    Title="MainWindow" Height="300" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <!--<RowDefinition />-->
+            <!--<RowDefinition />
+            <RowDefinition />-->
+            <!--<RowDefinition />
+            <RowDefinition />-->
+        </Grid.RowDefinitions>
+        <local:SpectraGraph Grid.Row="0" StartWavelength="350" EndWavelength="800" WavelengthStep="1" Brightness="1" ActiveLaser="405" />
+        <local:SpectraGraph Grid.Row="1" StartWavelength="350" EndWavelength="800" WavelengthStep="1" Brightness="1" ActiveLaser="488" />
+        <local:SpectraGraph Grid.Row="2" StartWavelength="350" EndWavelength="800" WavelengthStep="1" Brightness="1" ActiveLaser="514" />
+        <local:SpectraGraph Grid.Row="3" StartWavelength="350" EndWavelength="800" WavelengthStep="1" Brightness="1" ActiveLaser="543" />
+        <!--<local:SpectraGraph Grid.Row="2" StartWavelength="350" EndWavelength="800" WavelengthStep="1" Brightness="1" ActiveLaser="488" />-->
+        <!--<local:SpectraGraph Grid.Row="2" StartWavelength="350" EndWavelength="800" WavelengthStep="1" Brightness="1" ActiveLaser="514" />-->
+        <!--<local:SpectraGraph Grid.Row="3" StartWavelength="350" EndWavelength="800" WavelengthStep="1" Brightness="1" ActiveLaser="543"/>-->
+        <!--<local:SpectraGraph Grid.Row="4" StartWavelength="350" EndWavelength="800" WavelengthStep="1" Brightness="1" ActiveLaser="542"/>-->
+        <!--<local:SpectraGraph Grid.Row="3" StartWavelength="350" EndWavelength="800" WavelengthStep="1" Brightness="1" ActiveLaser="544"/>-->
+        <!--<local:SpectraGraph Grid.Row="6" StartWavelength="350" EndWavelength="800" WavelengthStep="1" Brightness="1" ActiveLaser="633"/>-->
+    </Grid>
+</Window>
