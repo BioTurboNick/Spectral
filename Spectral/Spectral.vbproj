@@ -133,6 +133,59 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
     </EmbeddedResource>
     <None Include="app.config" />
+    <None Include="ColorMatchingFunction-BDApproximationPlusPostGamma.csv" />
+    <None Include="ColorMatchingFunction-BDApproximationPostGamma.csv" />
+    <None Include="ColorMatchingFunction-CIE2.csv" />
+    <None Include="ColorMatchingFunction-CIE2LuminanceCorrected.csv" />
+    <None Include="ColorMatchingFunction-CIE2LuminanceCorrectedNormalized.csv" />
+    <None Include="ColorMatchingFunction-CIE2LuminanceCorrectedTopNormalized.csv" />
+    <None Include="ColorMatchingFunction-CIE2LuminanceCorrectedTopNormalized2.csv" />
+    <None Include="ColorMatchingFunction-CIE2LuminanceCorrectedTopNormalized3.csv" />
+    <None Include="ColorMatchingFunction4.xlsx" />
+    <None Include="Data\All.csv" />
+    <None Include="Data\Current.csv" />
+    <None Include="Data\Fluorophore Spectra.xls" />
+    <None Include="Data\mApple  Estimated Spectrum.xlsx" />
+    <None Include="Data\McNamara_Boswell_Spectra_Dyes_FPs\McNamara Boswell 001 20050621U MPI 2003 spectra.xls" />
+    <None Include="Data\McNamara_Boswell_Spectra_Dyes_FPs\McNamara Boswell 002 20050621U MPI 2004 spectra.xls" />
+    <None Include="Data\McNamara_Boswell_Spectra_Dyes_FPs\McNamara Boswell 003 20050621U PhotoChemCAD 1998 Lindsey Spectra.xls" />
+    <None Include="Data\McNamara_Boswell_Spectra_Dyes_FPs\McNamara Boswell 004 20050621U Amersham spectra.xls" />
+    <None Include="Data\McNamara_Boswell_Spectra_Dyes_FPs\McNamara Boswell 005 20050621U ATTO-TEC 2004 spectra.xls" />
+    <None Include="Data\McNamara_Boswell_Spectra_Dyes_FPs\McNamara Boswell 006 20050621U Dyomics spectra.xls" />
+    <None Include="Data\McNamara_Boswell_Spectra_Dyes_FPs\McNamara Boswell 007 20050621U Martek 2004 spectra.xls" />
+    <None Include="Data\McNamara_Boswell_Spectra_Dyes_FPs\McNamara Boswell 008 20050621U Vysis 2004 spectra.xls" />
+    <None Include="Data\McNamara_Boswell_Spectra_Dyes_FPs\McNamara Boswell 009 20050621U Aryeh Weiss 2003 spectra.xls" />
+    <None Include="Data\McNamara_Boswell_Spectra_Dyes_FPs\McNamara Boswell 010 20050621U Patterson 2002 spectra.xls" />
+    <None Include="Data\McNamara_Boswell_Spectra_Dyes_FPs\McNamara Boswell 011 20050621U Fluorescent Proteins 2003 Spectra.xls" />
+    <None Include="Data\McNamara_Boswell_Spectra_Dyes_FPs\McNamara Boswell 012 20050621U Miscellaneous 2004 spectra.xls" />
+    <None Include="Data\McNamara_Boswell_Spectra_Dyes_FPs\McNamara Boswell 013 20050621U Adams 2003 Spectra.xls" />
+    <None Include="Data\McNamara_Boswell_Spectra_Dyes_FPs\McNamara Boswell 014 20050621U Tung 2003 Spectra.xls" />
+    <None Include="Data\McNamara_Boswell_Spectra_Dyes_FPs\McNamara Boswell 015 20050621U QDC 2003 spectra.xls" />
+    <None Include="Data\McNamara_Boswell_Spectra_Dyes_FPs\McNamara Boswell 016 20050621U Evident Technologies 2004 Spectra.xls" />
+    <None Include="Data\McNamara_Boswell_Spectra_Dyes_FPs\McNamara Boswell 017 20050621U miscellaneous Spectra.xls" />
+    <None Include="Data\McNamara_Boswell_Spectra_Dyes_FPs\McNamara Boswell 018 20050621U Goldsmith 2004 Spectra.xls" />
+    <None Include="Data\McNamara_Boswell_Spectra_Dyes_FPs\McNamara Boswell 019 20050622W miscellaneous 200503.xls" />
+    <None Include="Data\McNamara_Boswell_Spectra_Dyes_FPs\McNamara Boswell 020 20050622W ASI 1998 dye spectra.xls" />
+    <None Include="Data\McNamara_Boswell_Spectra_Dyes_FPs\McNamara Boswell 021 20051127S Miscellaneous dyes.xls" />
+    <None Include="Data\McNamara_Boswell_Spectra_Dyes_FPs\McNamara Boswell 022 20051218S Miscellaneous dyes.xls" />
+    <None Include="Data\McNamara_Boswell_Spectra_Filters\McNamara Boswell 201 20050622W Chroma 2004 filters.xls" />
+    <None Include="Data\McNamara_Boswell_Spectra_Filters\McNamara Boswell 202 20050622W Omega 2004 Microscopy Filters Spectra.xls" />
+    <None Include="Data\McNamara_Boswell_Spectra_Filters\McNamara Boswell 203r1 20051113 Semrock 2005 filter spectra.xls" />
+    <None Include="Data\McNamara_Boswell_Spectra_Filters\McNamara Boswell 204 20050622W Schott 2004 Filter Spectra.xls" />
+    <None Include="Data\McNamara_Boswell_Spectra_Filters\McNamara Boswell 205 20060417M Chroma ET filters.xls" />
+    <None Include="Data\McNamara_Boswell_Spectra_Filters\McNamara Boswell 206 20060514S Nikon filter spectra.xls" />
+    <None Include="Data\McNamara_Boswell_Spectra_Lamps_other\McNamara Boswell 300 20050622W Lamps others 2004 Spectra = 26 entries - 20040405M.xls" />
+    <None Include="Data\McNamara_Boswell_Spectra_Lamps_other\McNamara Boswell 301 20050622W Busko lamps 2004 spectra = 59 entries - Aqua botanic 20040403A.xls" />
+    <None Include="Data\McNamara_Boswell_Spectra_Lamps_other\McNamara Boswell 302 20060514S Lamps spectra Exfo Metal-halide vs Xe vs Hg.xls" />
+    <None Include="Data\mRuby  Estimated Spectrum.xlsx" />
+    <None Include="Data\mTFP1_spectra.xls" />
+    <None Include="Data\New.csv" />
+    <None Include="Data\NirFP_spectra.xls" />
+    <None Include="Data\Set1.csv" />
+    <None Include="Data\Set2.csv" />
+    <None Include="Data\Set3.csv" />
+    <None Include="Data\Set4.csv" />
+    <None Include="Data\TagBFP_spectra.xls" />
     <None Include="My Project\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings1.Designer.vb</LastGenOutput>
